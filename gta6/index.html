@@ -2,13 +2,29 @@
 <html lang="en">
 
 <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y21T1K0TP8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y21T1K0TP8');
+    </script>
+
     <meta charset="utf-8">
     <title>iFruit Maps</title>
     <style>
-       @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
 
         * {
             font-family: 'Rethink Sans';
+        }
+
+        a {
+            text-decoration: underline;
+            color: #FFFFFF !important;
         }
 
         body {
@@ -17,21 +33,60 @@
 
         #info {
             position: absolute;
-            top: 10px;
+            top: 0;
+            left: 0;
+            height: 100%;
             width: 100%;
-            text-align: center;
             z-index: 100;
             display: block;
         }
+
+        #panel {
+            background-color: #030303;
+            color: #FFFFFF;
+            text-decoration: none !important;
+            border-radius: 20px;
+            width: auto;
+            /* Adjusted to match content width */
+            max-width: 80%;
+            /* Set a maximum width if needed */
+            padding: 10px;
+            /* Added padding */
+            position: absolute;
+            top: 10px;
+            /* Adjusted top position */
+            right: 10px;
+            /* Adjusted right position */
+            text-align: center;
+        }
     </style>
-  <script type="module" crossorigin src="/gta6/assets/index-yGFwYVPM.js"></script>
+    <script type="module" crossorigin src="/gta6/assets/index-nyntBFrs.js"></script>
 </head>
 
 <body>
     <div id="info">
-        <h3>GTA VI 3D Map Version 1</h3>
-        <p><a href="https://gtaforums.com/profile/1174985-violet/">by Violet on GTAForums</a> | <a href="/gta6/credits.txt">Credits</a> | Red: Unsure, Yellow: Ambiguous, White: Correct*</p>
-        
+        <div id="panel">
+            <h3>GTA VI 3D Map Version 2</h3>
+            <p style="margin-top: -15px;"><a href="https://gtaforums.com/profile/1174985-violet/">by Violet on
+                    GTAForums</a> | <a href="/gta6/credits.txt">Credits</a>
+            <ul style="text-align: left;">
+                <li>Blue: Position and Size Likely Correct</li>
+                <li>Yellow: Position and Size Ambiguous; Needs Updating</li>
+                <li>Red: Position and Size Definitely Incorrect; HIGH PRIORITY</li>
+            </ul>
+            <p>Right click & hold to look around. WASD to move.</p>
+            <p style="margin-top:-15px;">Shift to move faster. Space to go up, C to go down.</p>
+            <h3>Suggestions Welcome!</h3>
+            <div style="margin-top:-15px;">
+                <p>
+                    <a href="https://github.com/violetfrost/violetfrost.github.io/tree/main/gta6">Contribute on
+                        GitHub</a> | <a
+                        href="https://gtaforums.com/topic/985670-mapping-vice-city-map-discussion-thread-no-leaked-content-allowed/">Forum
+                        Thread</a>
+                </p>
+            </div>
+        </div>
+
         <h1 id="loading-text" style="visibility: hidden;">% Loaded</h1>
     </div>
 
